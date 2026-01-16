@@ -4,13 +4,13 @@ Interactive 3D Digital Twin interface using Three.js and WebGL. Features real-ti
 
 ## Features
 
-### 🎮 Interactive 3D Scene
+### Interactive 3D Scene
 - Real-time 3D visualization with Three.js and WebGL
 - Advanced lighting system (ambient, directional, point lights)
 - Shadow mapping and fog effects
 - Particle system with 500+ particles
 
-### 🔧 Interactive Objects
+### Interactive Objects
 
 #### Pipelines
 - **Flow Rate Control**: Adjust flow from 0-100 L/min
@@ -35,13 +35,13 @@ Interactive 3D Digital Twin interface using Three.js and WebGL. Features real-ti
 - **Real-time Data**: Temperature, humidity, and status monitoring
 - **Physics Simulation**: Floating orbs with physics interaction
 
-### 📊 Real-time Metrics Dashboard
+### Real-time Metrics Dashboard
 - **Live Graphs**: Temperature, Pressure, Flow Rate, and Power
 - **Metrics Display**: Current values with color-coded indicators
 - **Alert System**: Visual warnings for high temperature (>50°C)
 - **Auto-update**: Metrics refresh every 200ms
 
-### 🎛️ Control Panel
+### Control Panel
 - **Animation Speed**: Control simulation speed (0-2x)
 - **Physics Gravity**: Adjust gravity (-10 to 0)
 - **Camera Views**: Multiple preset camera angles (Default, Top, Front, Side, Close)
@@ -49,17 +49,17 @@ Interactive 3D Digital Twin interface using Three.js and WebGL. Features real-ti
 - **Wireframe Mode**: Toggle wireframe visualization
 - **Reset Scene**: Reposition all objects
 
-### 📈 Performance Monitoring
+### Performance Monitoring
 - **FPS Counter**: Real-time frame rate
 - **Object Count**: Total 3D objects in scene
 - **Physics Bodies**: Active physics simulation bodies
 
-### 🗺️ Mini Map
+### Mini Map
 - Top-down view of the scene
 - Color-coded object positions
 - Real-time updates
 
-### 🖱️ Object Interaction
+### Object Interaction
 - **Click Objects**: Select and view details
 - **Detailed Information**: Metrics, position, and controls
 - **Highlight Effect**: Selected objects glow yellow
@@ -148,19 +148,3 @@ digital-twin-3d/
 - Particle systems
 - Emissive materials
 
-## Browser Support
-
-- Chrome/Edge (recommended)
-- Firefox
-- Safari
-- Opera
-
-Requires WebGL 2.0 support.
-
-## License
-
-MIT
-
-## Author
-
-Digital Twin 3D Interactive - Advanced 3D visualization and simulation platform.
