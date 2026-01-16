@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twin 3D Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container"></div>
+    <div id="ui-overlay">
+        <div class="control-panel">
+            <h2>Digital Twin Controls</h2>
+            <div class="control-group">
+                <label>Animation Speed</label>
+                <input type="range" id="animSpeed" min="0" max="2" step="0.1" value="1">
+                <span id="animSpeedValue">1.0</span>
+            </div>
+            <div class="control-group">
+                <label>Physics Gravity</label>
+                <input type="range" id="gravity" min="-10" max="0" step="0.5" value="-9.8">
+                <span id="gravityValue">-9.8</span>
+            </div>
+            <div class="control-group">
+                <label>Camera View</label>
+                <select id="cameraView" class="camera-select">
+                    <option value="default">Default</option>
+                    <option value="top">Top View</option>
+                    <option value="front">Front View</option>
+                    <option value="side">Side View</option>
+                    <option value="close">Close Up</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Cooling System</label>
+                <input type="range" id="cooling" min="0" max="100" step="5" value="0">
+                <span id="coolingValue">0%</span>
+            </div>
+            <div class="control-group">
+                <button id="resetBtn">Reset Scene</button>
+                <button id="wireframeBtn" class="btn-secondary">Toggle Wireframe</button>
+            </div>
+        </div>
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-label">FPS</span>
+                <span id="fps" class="stat-value">60</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Objects</span>
+                <span id="objectCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Physics Bodies</span>
+                <span id="physicsCount" class="stat-value">0</span>
+            </div>
+        </div>
+        <div class="details-panel" id="detailsPanel" style="display: none;">
+            <h3 id="detailsTitle">Object Details</h3>
+            <div class="details-content" id="detailsContent"></div>
+            <button id="closeDetails" class="close-btn">×</button>
+        </div>
+        <div class="metrics-panel">
+            <h3>Real-time Metrics</h3>
+            <div class="metric-chart">
+                <canvas id="metricChart" width="300" height="150"></canvas>
+            </div>
+            <div class="metric-list">
+                <div class="metric-item">
+                    <span class="metric-label">Temperature</span>
+                    <span class="metric-value" id="tempValue">--°C</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Pressure</span>
+                    <span class="metric-value" id="pressureValue">--Pa</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Flow Rate</span>
+                    <span class="metric-value" id="flowValue">--L/min</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">Power</span>
+                    <span class="metric-value" id="powerValue">--kW</span>
+                </div>
+            </div>
+        </div>
+        <div class="minimap-panel">
+            <h4>Mini Map</h4>
+            <canvas id="minimap" width="200" height="200"></canvas>
+        </div>
+        <div class="alert-container" id="alertContainer"></div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
